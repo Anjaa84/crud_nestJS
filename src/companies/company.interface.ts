@@ -1,5 +1,5 @@
 export interface Company {
-    id?: number;
-    body?: string;
-    createdAt?: Date;
+  id?: number;
+  body?: string;
+  createdAt?: Date;
 }

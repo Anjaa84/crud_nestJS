@@ -1,14 +1,13 @@
-import { Column, Entity } from "typeorm";
-import { BaseEntity } from '../base.entity';
-
-
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('companies')
-export class CompanyEntity extends BaseEntity {
-    @Column({ type: 'varchar', length: 100, nullable: false })
-    name: string;
-    @Column({ type: 'varchar', length: 100, nullable: true })
-    domain: string;
-    @Column({ type: 'text', nullable: false, default: null })
-    description: string
+export class CompanyEntity {
+  @PrimaryGeneratedColumn('increment')
+  id: number;
+  @Column()
+  cid: string;
+  @Column({ default: '' })
+  body: string;
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  createdAt: Date;
 }
