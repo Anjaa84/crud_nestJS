@@ -36,7 +36,7 @@ export class ProductsController {
     updateProduct(
         @Param('id') prodId: string,
         @Body('title') prodTitle: string,
-        @Body('description') prodDesc: string,    
+        @Body('description') prodDesc: string,
         @Body('price') prodPrice: number,
 
     ) {
