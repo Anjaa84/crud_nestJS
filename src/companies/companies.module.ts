@@ -5,13 +5,9 @@ import { CompaniesService } from './services/companies.service';
 import { CompanyEntity } from './company.entity';
 
 @Module({
-  imports: [
-    TypeOrmModule.forFeature([CompanyEntity])
-
-  ],
+  imports: [TypeOrmModule.forFeature([CompanyEntity])],
 
   controllers: [CompaniesController],
   providers: [CompaniesService],
-
 })
-export class CompaniesModule { }
+export class CompaniesModule {}
