@@ -14,7 +14,8 @@ export class ProductsController {
         const generateId = this.productsService.insertProduct(
             prodTitle,
             prodDesc,
-            prodPrice
+            prodPrice,
+            prodRegId
         );
         return { id: generateId };
 
